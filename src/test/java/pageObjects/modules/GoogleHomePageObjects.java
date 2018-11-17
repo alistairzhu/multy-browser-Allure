@@ -38,9 +38,9 @@ public class GoogleHomePageObjects extends PageFactoryInitializer
 		return this;	
 	}
 
-	public GoogleHomePageObjects verifyPageTitle() throws Exception 
+	public GoogleHomePageObjects verifyPageTitle(String title) throws Exception
 	{
-		FluentWaiting.waitForTitleToBe(5, 500, "Google");
+		FluentWaiting.waitForTitleToBe(5, 500, title);
 		return this;
 	}
 
