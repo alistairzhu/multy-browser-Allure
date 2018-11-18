@@ -7,8 +7,8 @@
 	<test name="Test">
 		<classes>
 			<class name="tests.Test1" />
-			<!--<class name="tests.Test2" />
-			<class name="tests.TestProperties" /-->
+			<class name="tests.Test2" />
+			<class name="tests.TestProperties" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

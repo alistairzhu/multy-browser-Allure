@@ -1,0 +1,9 @@
+MainTest.class
+tests/MainTest.class
+pageObjects/modules/GMailPageObjects.class
+pageObjects/initializePageObjects/PageFactoryInitializer.class
+tests/Test1.class
+tests/Test3.class
+pageObjects/modules/GoogleHomePageObjects.class
+tests/Test2.class
+tests/TestProperties.class

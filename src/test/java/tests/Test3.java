@@ -5,12 +5,11 @@ import org.testng.annotations.Test;
 
 public class Test3 {
     @Test()
-    public void testSample3() 			throws Exception
-
+    public void testSample3()
 
 
     {
-        System.out.println("---------------");
+        System.out.println("------------+++++++g+++---");
         Assert.assertTrue(true);
     }
 }

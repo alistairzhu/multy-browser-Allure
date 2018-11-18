@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[Execution of the Suite 'Suite' Started!]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TestController.beforeSuite]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TestController.beforeSuite]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing Test Test]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing Test Test]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BrowserFactory.StartBrowser]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BrowserFactory.StartBrowser]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TestController.startRecording]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TestController.startRecording]]>
+    </line>
+    <line>
+      <![CDATA[
+STARTED TESTING: tests.Test1.testGoogle
+]]>
+    </line>
+    <line>
+      <![CDATA[
+STARTED TESTING: tests.Test1.testGoogle
+]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : Test1.testGoogle]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : Test1.testGoogle]]>
+    </line>
+    <line>
+      <![CDATA[
+SUCCESFULLY EXECUTED TEST: tests.Test1.testGoogle
+]]>
+    </line>
+    <line>
+      <![CDATA[
+]]>
+    </line>
+    <line>
+      <![CDATA[
+SUCCESFULLY EXECUTED TEST: tests.Test1.testGoogle
+]]>
+    </line>
+    <line>
+      <![CDATA[
+]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TestController.stoprec]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TestController.stoprec]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BrowserFactory.tearDown]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BrowserFactory.tearDown]]>
+    </line>
+    <line>
+      <![CDATA[
+STARTED TESTING: tests.TestProperties.test123
+]]>
+    </line>
+    <line>
+      <![CDATA[
+STARTED TESTING: tests.TestProperties.test123
+]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TestProperties.test123]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TestProperties.test123]]>
+    </line>
+    <line>
+      <![CDATA[
+SUCCESFULLY EXECUTED TEST: tests.TestProperties.test123
+]]>
+    </line>
+    <line>
+      <![CDATA[
+]]>
+    </line>
+    <line>
+      <![CDATA[
+SUCCESFULLY EXECUTED TEST: tests.TestProperties.test123
+]]>
+    </line>
+    <line>
+      <![CDATA[
+]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="10962" started-at="2018-11-18T03:36:15Z" finished-at="2018-11-18T03:36:26Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="10962" started-at="2018-11-18T03:36:15Z" finished-at="2018-11-18T03:36:26Z">
+      <class name="tests.Test1">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.Test1@4d4b019e]" name="beforeSuite" is-config="true" duration-ms="10" started-at="2018-11-17T22:36:15Z" finished-at="2018-11-17T22:36:15Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : TestController.beforeSuite]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="StartBrowser()[pri:0, instance:tests.Test1@4d4b019e]" name="StartBrowser" is-config="true" duration-ms="4231" started-at="2018-11-17T22:36:15Z" finished-at="2018-11-17T22:36:19Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BrowserFactory.StartBrowser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- StartBrowser -->
+        <test-method status="PASS" signature="startRecording(java.lang.reflect.Method)[pri:0, instance:tests.Test1@4d4b019e]" name="startRecording" is-config="true" duration-ms="94" started-at="2018-11-17T22:36:19Z" finished-at="2018-11-17T22:36:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.Test1.testGoogle() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : TestController.startRecording]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- startRecording -->
+        <test-method status="PASS" signature="testGoogle()[pri:0, instance:tests.Test1@4d4b019e]" name="testGoogle" duration-ms="1459" started-at="2018-11-17T22:36:19Z" finished-at="2018-11-17T22:36:21Z">
+          <reporter-output>
+            <line>
+              <![CDATA[
+STARTED TESTING: tests.Test1.testGoogle
+]]>
+            </line>
+            <line>
+              <![CDATA[
+STARTED TESTING: tests.Test1.testGoogle
+]]>
+            </line>
+            <line>
+              <![CDATA[About to begin executing following method : Test1.testGoogle]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : Test1.testGoogle]]>
+            </line>
+            <line>
+              <![CDATA[
+SUCCESFULLY EXECUTED TEST: tests.Test1.testGoogle
+]]>
+            </line>
+            <line>
+              <![CDATA[
+]]>
+            </line>
+            <line>
+              <![CDATA[
+SUCCESFULLY EXECUTED TEST: tests.Test1.testGoogle
+]]>
+            </line>
+            <line>
+              <![CDATA[
+]]>
+            </line>
+            <line>
+              <![CDATA[About to begin executing following method : TestController.stoprec]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testGoogle -->
+        <test-method status="PASS" signature="stoprec()[pri:0, instance:tests.Test1@4d4b019e]" name="stoprec" is-config="true" duration-ms="0" started-at="2018-11-17T22:36:21Z" finished-at="2018-11-17T22:36:21Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : TestController.stoprec]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- stoprec -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.Test1@4d4b019e]" name="tearDown" is-config="true" duration-ms="5078" started-at="2018-11-17T22:36:21Z" finished-at="2018-11-17T22:36:26Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BrowserFactory.tearDown]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.Test1 -->
+      <class name="tests.TestProperties">
+        <test-method status="PASS" signature="test123()[pri:0, instance:tests.TestProperties@7ed8b44]" name="test123" duration-ms="62" started-at="2018-11-17T22:36:26Z" finished-at="2018-11-17T22:36:26Z">
+          <reporter-output>
+            <line>
+              <![CDATA[
+STARTED TESTING: tests.TestProperties.test123
+]]>
+            </line>
+            <line>
+              <![CDATA[
+STARTED TESTING: tests.TestProperties.test123
+]]>
+            </line>
+            <line>
+              <![CDATA[About to begin executing following method : TestProperties.test123]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : TestProperties.test123]]>
+            </line>
+            <line>
+              <![CDATA[
+SUCCESFULLY EXECUTED TEST: tests.TestProperties.test123
+]]>
+            </line>
+            <line>
+              <![CDATA[
+]]>
+            </line>
+            <line>
+              <![CDATA[
+SUCCESFULLY EXECUTED TEST: tests.TestProperties.test123
+]]>
+            </line>
+            <line>
+              <![CDATA[
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test123 -->
+      </class> <!-- tests.TestProperties -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

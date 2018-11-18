@@ -1,0 +1,14 @@
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/controllers/InitMethod.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/utils/AllureAttachments.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/utils/DateAndTime.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/controllers/BrowserFactory.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/utils/EnvironmentSetup.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/utils/FluentWaiting.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/utils/RandomGenerator.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/controllers/TestHelper.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/utils/SpecializedScreenRecorder.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/controllers/ApplicationConfiguration.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/controllers/ExcelDataProvider.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/controllers/TestController.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/listeners/AllureListener.java
+/home/az/IdeaProjects/allure/multy-browser-Allure/src/main/java/utils/ExcelUtils.java

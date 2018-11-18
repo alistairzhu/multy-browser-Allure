@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="11.363" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.181-b13"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/az/IdeaProjects/allure/multy-browser-Allure"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CA"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/az/IdeaProjects/allure/multy-browser-Allure"/>
+    <property name="java.runtime.version" value="1.8.0_181-8u181-b13-1ubuntu0.18.04.1-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="basedir" value="/home/az/IdeaProjects/allure/multy-browser-Allure"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="javax.accessibility.assistive_technologies" value="org.GNOME.Accessibility.AtkWrapper"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="surefire.test.class.path" value="/home/az/IdeaProjects/allure/multy-browser-Allure/target/test-classes:/home/az/IdeaProjects/allure/multy-browser-Allure/target/classes:/home/az/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/az/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/az/.m2/repository/org/testng/testng/6.11/testng-6.11.jar:/home/az/.m2/repository/com/beust/jcommander/1.64/jcommander-1.64.jar:/home/az/.m2/repository/org/yaml/snakeyaml/1.17/snakeyaml-1.17.jar:/home/az/.m2/repository/org/seleniumhq/selenium/selenium-java/3.5.2/selenium-java-3.5.2.jar:/home/az/.m2/repository/org/seleniumhq/selenium/selenium-api/3.5.2/selenium-api-3.5.2.jar:/home/az/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.5.2/selenium-remote-driver-3.5.2.jar:/home/az/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.5.2/selenium-safari-driver-3.5.2.jar:/home/az/.m2/repository/cglib/cglib-nodep/3.2.4/cglib-nodep-3.2.4.jar:/home/az/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/az/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/az/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/home/az/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/home/az/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/az/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar:/home/az/.m2/repository/net/sourceforge/cssparser/cssparser/0.9.23/cssparser-0.9.23.jar:/home/az/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/home/az/.m2/repository/com/google/guava/guava/23.0/guava-23.0.jar:/home/az/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/az/.m2/repository/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18.jar:/home/az/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/az/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/az/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.27/htmlunit-2.27.jar:/home/az/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.27/htmlunit-core-js-2.27.jar:/home/az/.m2/repository/net/sourceforge/htmlunit/neko-htmlunit/2.27/neko-htmlunit-2.27.jar:/home/az/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/az/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/az/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/home/az/.m2/repository/org/eclipse/jetty/jetty-client/9.4.5.v20170502/jetty-client-9.4.5.v20170502.jar:/home/az/.m2/repository/org/eclipse/jetty/jetty-http/9.4.5.v20170502/jetty-http-9.4.5.v20170502.jar:/home/az/.m2/repository/org/eclipse/jetty/jetty-io/9.4.5.v20170502/jetty-io-9.4.5.v20170502.jar:/home/az/.m2/repository/org/eclipse/jetty/jetty-util/9.4.5.v20170502/jetty-util-9.4.5.v20170502.jar:/home/az/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/home/az/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/home/az/.m2/repository/com/codeborne/phantomjsdriver/1.4.0/phantomjsdriver-1.4.0.jar:/home/az/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/az/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.4.5.v20170502/websocket-api-9.4.5.v20170502.jar:/home/az/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.4.5.v20170502/websocket-client-9.4.5.v20170502.jar:/home/az/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.4.5.v20170502/websocket-common-9.4.5.v20170502.jar:/home/az/.m2/repository/xalan/serializer/2.7.2/serializer-2.7.2.jar:/home/az/.m2/repository/xalan/xalan/2.7.2/xalan-2.7.2.jar:/home/az/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar:/home/az/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/home/az/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.5.2/selenium-firefox-driver-3.5.2.jar:/home/az/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.5.2/selenium-chrome-driver-3.5.2.jar:/home/az/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.5.2/selenium-edge-driver-3.5.2.jar:/home/az/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.5.2/selenium-opera-driver-3.5.2.jar:/home/az/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.3.1/selenium-ie-driver-3.3.1.jar:/home/az/.m2/repository/org/seleniumhq/selenium/htmlunit-driver/2.23.1/htmlunit-driver-2.23.1.jar:/home/az/.m2/repository/org/seleniumhq/selenium/selenium-support/3.5.2/selenium-support-3.5.2.jar:/home/az/.m2/repository/com/pojosontheweb/monte-repack/1.0/monte-repack-1.0.jar:/home/az/.m2/repository/javax/media/jai/com.springsource.javax.media.jai.core/1.1.3/com.springsource.javax.media.jai.core-1.1.3.jar:/home/az/.m2/repository/javax/media/jai/com.springsource.javax.media.jai.codec/1.1.3/com.springsource.javax.media.jai.codec-1.1.3.jar:/home/az/.m2/repository/javax/media/jmf/2.1.1e/jmf-2.1.1e.jar:/home/az/.m2/repository/ru/yandex/qatools/properties/properties-loader/1.5/properties-loader-1.5.jar:/home/az/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.3/commons-beanutils-core-1.8.3.jar:/home/az/.m2/repository/ru/yandex/qatools/ashot/ashot/1.5.4/ashot-1.5.4.jar:/home/az/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/home/az/.m2/repository/ru/yandex/qatools/allure/allure-java-annotations/1.5.4/allure-java-annotations-1.5.4.jar:/home/az/.m2/repository/ru/yandex/qatools/allure/allure-model/1.5.4/allure-model-1.5.4.jar:/home/az/.m2/repository/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.9.3/jaxb2-basics-runtime-0.9.3.jar:/home/az/.m2/repository/ru/qatools/commons/properties/2.0.RC6/properties-2.0.RC6.jar:/home/az/.m2/repository/org/seleniumhq/selenium/fluent/fluent-selenium/1.16.1/fluent-selenium-1.16.1.jar:/home/az/.m2/repository/org/apache/poi/poi/3.13/poi-3.13.jar:/home/az/.m2/repository/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13.jar:/home/az/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.13/poi-ooxml-schemas-3.13.jar:/home/az/.m2/repository/org/apache/poi/ooxml-schemas/1.3/ooxml-schemas-1.3.jar:/home/az/.m2/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar:/home/az/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/home/az/.m2/repository/ru/yandex/qatools/allure/allure-testng-adaptor/1.5.4/allure-testng-adaptor-1.5.4.jar:/home/az/.m2/repository/ru/yandex/qatools/allure/allure-java-aspects/1.5.4/allure-java-aspects-1.5.4.jar:/home/az/.m2/repository/ru/yandex/qatools/allure/allure-java-adaptor-api/1.5.4/allure-java-adaptor-api-1.5.4.jar:/home/az/.m2/repository/org/apache/tika/tika-core/1.7/tika-core-1.7.jar:/home/az/.m2/repository/ru/yandex/qatools/htmlelements/htmlelements-java/1.17/htmlelements-java-1.17.jar:/home/az/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/home/az/.m2/repository/org/aspectj/aspectjtools/1.8.10/aspectjtools-1.8.10.jar:/home/az/.m2/repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar:/home/az/.m2/repository/org/slf4j/slf4j-api/1.7.24/slf4j-api-1.7.24.jar:/home/az/.m2/repository/org/slf4j/slf4j-log4j12/1.7.24/slf4j-log4j12-1.7.24.jar:/home/az/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/az/.m2/repository/org/slf4j/jul-to-slf4j/1.7.24/jul-to-slf4j-1.7.24.jar:/home/az/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.24/jcl-over-slf4j-1.7.24.jar:/home/az/.m2/repository/com/assertthat/selenium-shutterbug/0.6/selenium-shutterbug-0.6.jar:/home/az/.m2/repository/org/apache/maven/surefire/surefire-testng-utils/2.20/surefire-testng-utils-2.20.jar:/home/az/.m2/repository/org/apache/maven/surefire/surefire-grouper/2.20/surefire-grouper-2.20.jar:"/>
+    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="4.15.0-36-generic"/>
+    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/az"/>
+    <property name="user.timezone" value="America/Toronto"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="az"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_181"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
+    <property name="webdriver.chrome.driver" value="./src/main/resources/Drivers/Linux/chromedriver"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="localRepository" value="/home/az/.m2/repository"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.font.fontmanager" value="sun.awt.X11FontManager"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testGoogle" classname="tests.Test1" time="1.461"/>
+  <testcase name="test123" classname="tests.TestProperties" time="0.063"/>
+</testsuite>

@@ -352,6 +352,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.20</version>
 				<configuration>
+					<!-- For Ubuntu, need to set <testFailureIgnore> and <forkMode>, or will get "maven-surefire-plugin" error and <forkMode> error.  -->
 					<testFailureIgnore>true</testFailureIgnore>
 					<forkMode>none</forkMode>
 					<suiteXmlFiles>
