@@ -9,7 +9,7 @@ public class Test3 {
 
 
     {
-        System.out.println("------------+++++++g+++---");
+        System.out.println("------------+++++++g666+++---");
         Assert.assertTrue(true);
     }
 }
