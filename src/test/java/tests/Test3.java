@@ -17,6 +17,7 @@ public class Test3 extends PageFactoryInitializer {
      * 2. Fill username and password and signin
      * 3. Click More to expand mail folders
      * 4. Continue...
+     * 5. ...
      */
 
     @TestCaseId("TC_GMail_004")
