@@ -16,10 +16,10 @@ public class Test3 extends PageFactoryInitializer {
      * 1. Open Google homepage and click the Gmail button
      * 2. Fill username and password and signin
      * 3. Click More to expand mail folders
-     * 4.
+     * 4. Continue...
      */
 
-    @TestCaseId("TC_GMail_003")
+    @TestCaseId("TC_GMail_004")
     @Test()
     public void testGmailLogin() throws Exception {
         googleHomePage().clickonGmailLink();
