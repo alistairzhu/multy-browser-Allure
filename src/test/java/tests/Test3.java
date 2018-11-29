@@ -10,12 +10,22 @@ import ru.yandex.qatools.allure.annotations.TestCaseId;
 
 public class Test3 extends PageFactoryInitializer {
 
+    /**
+     * This test is to Login function in Gmail.
+     * Steps:
+     * 1. Open Google homepage and click the Gmail button
+     * 2. Fill username and password and signin
+     * 3. Click More to expand mail folders
+     *
+     */
+
     @TestCaseId("TC_GMail_003")
     @Test()
     public void testGmailLogin() throws Exception {
         googleHomePage().clickonGmailLink();
         gmailPage().signInGmail("canzhuanywhere@gmail.com", "!Asdf1234");
         gmailMainPage().expandMore();
+
     }
 
 }
