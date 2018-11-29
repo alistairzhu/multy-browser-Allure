@@ -192,6 +192,6 @@ public class BrowserFactory extends TestHelper
 	public void tearDown() throws Exception 
 	{
 		Thread.sleep(5000);
-		driver.quit();
+		//driver.quit(); // AZ: need to enable it later
 	}
 }

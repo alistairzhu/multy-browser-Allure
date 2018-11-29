@@ -1,15 +1,21 @@
 package tests;
 
-import org.junit.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import pageObjects.initializePageObjects.PageFactoryInitializer;
+import ru.yandex.qatools.allure.annotations.TestCaseId;
 
-public class Test3 {
+
+@Listeners({listeners.AllureListener.class})
+
+public class Test3 extends PageFactoryInitializer {
+
+    @TestCaseId("TC_GMail_003")
     @Test()
-    public void testSample3()
-
-
-    {
-        System.out.println("------------+++++++g666+++---");
-        Assert.assertTrue(true);
+    public void testGmailLogin() throws Exception {
+        googleHomePage().clickonGmailLink();
+        gmailPage().signInGmail("canzhuanywhere@gmail.com", "!Asdf1234");
+        gmailMainPage().expandMore();
     }
+
 }

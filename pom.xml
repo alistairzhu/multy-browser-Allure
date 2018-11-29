@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!--project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"-->
+	<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>WebAutomation</groupId>
 	<artifactId>WebAutomation_AllurePOM</artifactId>
@@ -296,7 +296,7 @@
 			<build>
 				<plugins>
 
-					<!-- This plugin signs all of the project's attached artifacts with 
+					<!-- This plugin signs all of the project's attached artifacts with
 						GnuPG -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -315,7 +315,7 @@
 						</configuration>
 					</plugin>
 
-					<!-- This Plugin handles the copying of project resources to the output 
+					<!-- This Plugin handles the copying of project resources to the output
 						directory -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -323,7 +323,7 @@
 						<version>3.0.2</version>
 					</plugin>
 
-					<!-- This Plugin creates a jar archive of the source files of the current 
+					<!-- This Plugin creates a jar archive of the source files of the current
 						project -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -331,7 +331,7 @@
 						<version>3.0.1</version>
 					</plugin>
 
-					<!-- The Javadoc Plugin uses the Javadoc tool to generate javadocs for 
+					<!-- The Javadoc Plugin uses the Javadoc tool to generate javadocs for
 						the specified project -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -359,7 +359,7 @@
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<argLine>-javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar</argLine>
-					<!-- <properties> <property> <name>listener</name> <value>com.automation.remarks.testng.VideoListener</value> 
+					<!-- <properties> <property> <name>listener</name> <value>com.automation.remarks.testng.VideoListener</value>
 						</property> </properties> -->
 				</configuration>
 				<dependencies>
@@ -371,7 +371,7 @@
 				</dependencies>
 			</plugin>
 
-			<!-- To Display the Environment Details in the Allure Report/Copy Enivroment.XML 
+			<!-- To Display the Environment Details in the Allure Report/Copy Enivroment.XML
 				File to allure-results Folder -->
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -437,7 +437,7 @@
 				</executions>
 			</plugin>
 
-			<!--Needed only to show reports locally. Run jetty:run and open localhost:8080 
+			<!--Needed only to show reports locally. Run jetty:run and open localhost:8080
 				to show the report -->
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
