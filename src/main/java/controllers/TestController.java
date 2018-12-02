@@ -22,10 +22,11 @@ import utils.DateAndTime;
 import utils.EnvironmentSetup;
 
 /**
- * @Author Gladson Antony
- * @Date 28-Jan-2017
+ * @BeforeSuite :  Setup environment.
+ * @BeforeMethod : startRecording().
+ * @AfterMethod : stopRecording();
  */
-public class TestController extends InitMethod
+public class TestController extends Initialization
 {
 	@BeforeSuite
 	public void beforeSuite() throws Exception

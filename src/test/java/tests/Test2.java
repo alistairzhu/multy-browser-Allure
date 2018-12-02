@@ -30,8 +30,8 @@ public class Test2 {
 		proc.waitFor();
 	}
 
-	@Test(enabled=false)
-	public void test123() throws Exception 
+	@Test(enabled=true)
+	public void test123A() throws Exception
 	{
 		String command="mvn -version";
 

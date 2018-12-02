@@ -12,6 +12,9 @@ import java.nio.file.Paths;
 
 import javax.imageio.ImageIO;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import controllers.ApplicationConfiguration;
@@ -27,7 +30,7 @@ public class AllureAttachments extends ApplicationConfiguration
 {
 	/*To Attach the Entire Page Screenshot*/
 	@Attachment(value = "Entirepage Screenshot of {0}", type = "image/png")
-	public static byte[] saveFullPageScreenshot(String name,WebDriver driver) 
+	public static byte[] saveFullPageScreenshot(String name,WebDriver driver)
 	{
 		try {
 			BufferedImage image  = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver).getImage();
@@ -45,6 +48,34 @@ public class AllureAttachments extends ApplicationConfiguration
 		return "Unable to Get Screenshot.".getBytes();
 	}
 
+	/*To Attach the Entire Page Screenshot*/
+	//@Attachment(value = "Entirepage Screenshot of {0}", type = "image/png")
+	public static void saveFullPageScreenshotToFile(String name,WebDriver driver)
+	{
+		try {
+
+			//Convert web driver object to TakeScreenshot
+
+			TakesScreenshot scrShot =((TakesScreenshot)driver);
+
+			//Call getScreenshotAs method to create image file
+
+			File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+
+			//Move image file to new destination
+
+			File DestFile=new File(name);
+
+			//Copy file at destination
+
+			FileUtils.copyFile(SrcFile, DestFile);
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+
+	}
 	/*To Convert the File to Bytes*/
 	private static byte[] fileToBytes(String fileName) throws Exception 
 	{

@@ -8,274 +8,213 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import dbHelpers.SQLQueries;
+import dbHelpers.SqlQueries;
 import entity.Person;
-import dbHelpers.JDBCHelper;
+import dbHelpers.JdbcHelper;
 
 /**
  * SQL:
  * create table PERSON (ID bigint not null, EMAIL varchar(255), FIRST_NAME varchar(255), JOINED_DATE date, LAST_NAME varchar(255), primary key (id))
  * This class is used to test CRUD operations on DB.
- *
  */
 public class JDBCDaoImplimentation {
 
-    public static void main( String[] args )
-    {
-        Person person = new Person( 1, "James", "Bond", "007@jamesbond.com", new java.util.Date() );
-        Person person2 = new Person( 2, "Forest", "Gump", "forestgump@jamesbond.com", new java.util.Date() );
+    public static void main(String[] args) {
+        Person person = new Person(1, "James", "Bond", "007@jamesbond.com", new java.util.Date());
+        Person person2 = new Person(2, "Forest", "Gump", "forestgump@jamesbond.com", new java.util.Date());
 
-        try
-        {
+        try {
             // Create
-            insertPerson( person );
-            insertPerson( person2 );
-            System.out.println( "Persons got inserted sucessfully. This is \"C\" of CRUD " );
+            insertPerson(person);
+            insertPerson(person2);
+            System.out.println("Persons got inserted sucessfully. This is \"C\" of CRUD ");
             System.out.println();
-            System.out.println( "--------------------------------------------------------------------------------------" );
+            System.out.println("--------------------------------------------------------------------------------------");
 
             // Read(get all)
             List<Person> persons = retrivePersons();
-            System.out.println( "Retrived all persons from DB.This is \"R\" of CRUD " );
-            for ( Person p : persons )
-            {
-                System.out.println( p );
+            System.out.println("Retrived all persons from DB.This is \"R\" of CRUD ");
+            for (Person p : persons) {
+                System.out.println(p);
             }
             System.out.println();
-            System.out.println( "--------------------------------------------------------------------------------------" );
+            System.out.println("--------------------------------------------------------------------------------------");
             // Update
-            person.setFirstName( "Updated name" );
-            updatePersonFirstName( person );
-            System.out.println( "Updated the first name of person 2. This is \"U\" of CRUD " );
+            person.setFirstName("Updated name");
+            updatePersonFirstName(person);
+            System.out.println("Updated the first name of person 2. This is \"U\" of CRUD ");
             System.out.println();
-            System.out.println( "--------------------------------------------------------------------------------------" );
+            System.out.println("--------------------------------------------------------------------------------------");
             // Read(get one )
-            Person tempPerson2 = retrivePerson( 2 );
-            System.out.println( "Retrived person2 from DB " + tempPerson2 );
+            Person tempPerson2 = retrivePerson(2);
+            System.out.println("Retrived person2 from DB " + tempPerson2);
             System.out.println();
-            System.out.println( "--------------------------------------------------------------------------------------" );
+            System.out.println("--------------------------------------------------------------------------------------");
             // Delete
-            deletePerson( 2 );
-            System.out.println( "Deleted person2 from DB.This is \"D\" of CRUD " );
+            deletePerson(2);
+            System.out.println("Deleted person2 from DB.This is \"D\" of CRUD ");
             System.out.println();
-            System.out.println( "--------------------------------------------------------------------------------------" );
+            System.out.println("--------------------------------------------------------------------------------------");
             // Read(get all)
             List<Person> tempPersons = retrivePersons();
-            System.out.println( "Retrived all persons from DB. Notice person 2 is not present" );
-            for ( Person p : tempPersons )
-            {
-                System.out.println( p );
+            System.out.println("Retrived all persons from DB. Notice person 2 is not present");
+            for (Person p : tempPersons) {
+                System.out.println(p);
             }
             System.out.println();
-            System.out.println( "--------------------------------------------------------------------------------------" );
+            System.out.println("--------------------------------------------------------------------------------------");
             // Delete
             deleteAllRecords();//AZ
-            System.out.println( "Deleted all records" );
+            System.out.println("Deleted all records");
 
-        }
-        catch ( SQLException e )
-        {
-            System.out.println( "Exception occured " + e.getMessage() );
+        } catch (SQLException e) {
+            System.out.println("Exception occured " + e.getMessage());
 
-        }
-
-        catch ( Exception e )
-        {
-            System.out.println( "Exception occured " + e.getMessage() );
+        } catch (Exception e) {
+            System.out.println("Exception occured " + e.getMessage());
         }
     }
 
-    private static void deleteAllRecords() throws SQLException
-    {
+    private static void deleteAllRecords() throws SQLException {
         Connection con = null;
         PreparedStatement ps = null;
-        try
-        {
-            con = JDBCHelper.getConnection();
-            if ( con == null )
-            {
-                System.out.println( "Error getting the connection. Please check if the DB server is running" );
+        try {
+            con = JdbcHelper.getConnection();
+            if (con == null) {
+                System.out.println("Error getting the connection. Please check if the DB server is running");
                 return;
             }
-            ps = con.prepareStatement( SQLQueries.DELETE_ALL_SQL_QUERY );
+            ps = con.prepareStatement(SqlQueries.DELETE_ALL_SQL_QUERY);
             ps.execute();
-            System.out.println( "deleteAllRecords => " + ps.toString() );
-        }
-        catch ( SQLException e )
-        {
+            System.out.println("deleteAllRecords => " + ps.toString());
+        } catch (SQLException e) {
             throw e;
 
-        }
-
-        finally
-        {
-            try
-            {
-                JDBCHelper.closePrepaerdStatement( ps );
-                JDBCHelper.closeConnection( con );
-            }
-            catch ( SQLException e )
-            {
+        } finally {
+            try {
+                JdbcHelper.closePrepaerdStatement(ps);
+                JdbcHelper.closeConnection(con);
+            } catch (SQLException e) {
                 throw e;
             }
         }
     }
 
-    private static void deletePerson( int id ) throws SQLException
-    {
+    private static void deletePerson(int id) throws SQLException {
         Connection con = null;
         PreparedStatement ps = null;
-        try
-        {
-            con = JDBCHelper.getConnection();
-            ps = con.prepareStatement( SQLQueries.DELETE_SQL_QUERY );
-            ps.setLong( 1, id );
+        try {
+            con = JdbcHelper.getConnection();
+            ps = con.prepareStatement(SqlQueries.DELETE_SQL_QUERY);
+            ps.setLong(1, id);
             ps.execute();
-            System.out.println( "deletePerson => " + ps.toString() );
-        }
-        catch ( SQLException e )
-        {
+            System.out.println("deletePerson => " + ps.toString());
+        } catch (SQLException e) {
             throw e;
-        }
-
-        finally
-        {
-            try
-            {
-                JDBCHelper.closePrepaerdStatement( ps );
-                JDBCHelper.closeConnection( con );
-            }
-            catch ( SQLException e )
-            {
+        } finally {
+            try {
+                JdbcHelper.closePrepaerdStatement(ps);
+                JdbcHelper.closeConnection(con);
+            } catch (SQLException e) {
                 throw e;
             }
         }
     }
 
-    private static Person retrivePerson( long id ) throws SQLException
-    {
+    private static Person retrivePerson(long id) throws SQLException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         Person person = new Person();
-        try
-        {
-            con = JDBCHelper.getConnection();
-            if ( con == null )
-            {
-                System.out.println( "Error getting the connection. Please check if the DB server is running" );
+        try {
+            con = JdbcHelper.getConnection();
+            if (con == null) {
+                System.out.println("Error getting the connection. Please check if the DB server is running");
                 return person;
             }
-            ps = con.prepareStatement( SQLQueries.SELECT_SQL_QUERY );
-            ps.setLong( 1, id );
+            ps = con.prepareStatement(SqlQueries.SELECT_SQL_QUERY);
+            ps.setLong(1, id);
             rs = ps.executeQuery();
-            System.out.println( "retrivePerson => " + ps.toString() );
-            while ( rs.next() )
-            {
-                person.setId( rs.getLong( "ID" ) );
-                person.setFirstName( rs.getString( "FIRST_NAME" ) );
-                person.setLastName( rs.getString( "LAST_NAME" ) );
-                person.setEmail( rs.getString( 4 ) ); // this is to show that we can retrive using index of the column
-                person.setJoinedDate( rs.getDate( "JOINED_DATE" ) );
+            System.out.println("retrivePerson => " + ps.toString());
+            while (rs.next()) {
+                person.setId(rs.getLong("ID"));
+                person.setFirstName(rs.getString("FIRST_NAME"));
+                person.setLastName(rs.getString("LAST_NAME"));
+                person.setEmail(rs.getString(4)); // this is to show that we can retrive using index of the column
+                person.setJoinedDate(rs.getDate("JOINED_DATE"));
 
                 // Alternative way to create a new Person
                 //person = new Person(rs.getLong( "ID" ), rs.getString( "FIRST_NAME" ), rs.getString( "LAST_NAME" ), rs.getString( 4 ), rs.getDate( "JOINED_DATE" ));
             }
 
-        }
-        catch ( SQLException e )
-        {
+        } catch (SQLException e) {
             throw e;
 
-        }
-
-        finally
-        {
-            try
-            {
-                JDBCHelper.closeResultSet( rs );
-                JDBCHelper.closePrepaerdStatement( ps );
-                JDBCHelper.closeConnection( con );
-            }
-            catch ( SQLException e )
-            {
+        } finally {
+            try {
+                JdbcHelper.closeResultSet(rs);
+                JdbcHelper.closePrepaerdStatement(ps);
+                JdbcHelper.closeConnection(con);
+            } catch (SQLException e) {
                 throw e;
             }
         }
         return person;
     }
 
-    private static void updatePersonFirstName( Person person ) throws SQLException
-    {
+    private static void updatePersonFirstName(Person person) throws SQLException {
         Connection con = null;
         PreparedStatement ps = null;
 
-        try
-        {
-            con = JDBCHelper.getConnection();
-            if ( con == null )
-            {
-                System.out.println( "Error getting the connection. Please check if the DB server is running" );
+        try {
+            con = JdbcHelper.getConnection();
+            if (con == null) {
+                System.out.println("Error getting the connection. Please check if the DB server is running");
                 return;
             }
-            con.setAutoCommit( false );
-            ps = con.prepareStatement( SQLQueries.UPDATE_SQL_QUERY );
-            ps.setString( 1, person.getFirstName() );
-            ps.setLong( 2, person.getId() );
+            con.setAutoCommit(false);
+            ps = con.prepareStatement(SqlQueries.UPDATE_SQL_QUERY);
+            ps.setString(1, person.getFirstName());
+            ps.setLong(2, person.getId());
             ps.execute();
-            System.out.println( "updatePersonFirstName => " + ps.toString() );
+            System.out.println("updatePersonFirstName => " + ps.toString());
             con.commit();
 
-        }
-        catch ( SQLException e )
-        {
-            try
-            {
-                if ( con != null )
-                {
+        } catch (SQLException e) {
+            try {
+                if (con != null) {
                     con.rollback();
                     throw e;
                 }
-            }
-            catch ( SQLException e1 )
-            {
+            } catch (SQLException e1) {
                 throw e1;
             }
-        }
-        finally
-        {
-            try
-            {
-                JDBCHelper.closePrepaerdStatement( ps );
-                JDBCHelper.closeConnection( con );
-            }
-            catch ( SQLException e )
-            {
+        } finally {
+            try {
+                JdbcHelper.closePrepaerdStatement(ps);
+                JdbcHelper.closeConnection(con);
+            } catch (SQLException e) {
                 throw e;
             }
         }
 
     }
 
-    private static List<Person> retrivePersons() throws SQLException
-    {
+    private static List<Person> retrivePersons() throws SQLException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         List<Person> persons = new ArrayList<Person>();
-        try
-        {
-            con = JDBCHelper.getConnection();
-            if ( con == null )
-            {
-                System.out.println( "Error getting the connection. Please check if the DB server is running" );
+        try {
+            con = JdbcHelper.getConnection();
+            if (con == null) {
+                System.out.println("Error getting the connection. Please check if the DB server is running");
                 return persons;
             }
-            ps = con.prepareStatement( SQLQueries.SELECT_ALL_SQL_QUERY );
+            ps = con.prepareStatement(SqlQueries.SELECT_ALL_SQL_QUERY);
             rs = ps.executeQuery();
-            System.out.println( "retrivePersons => " + ps.toString() );
-            while ( rs.next() )
-            {
+            System.out.println("retrivePersons => " + ps.toString());
+            while (rs.next()) {
 /*
             Person p = new Person();
             p.setId( rs.getLong( "ID" ) );
@@ -285,84 +224,62 @@ public class JDBCDaoImplimentation {
             p.setJoinedDate( rs.getDate( "JOINED_DATE" ) );
 */
                 // Alternative way to create a new Person
-                Person p = new Person(rs.getLong( "ID" ), rs.getString( "FIRST_NAME" ), rs.getString( "LAST_NAME" ), rs.getString( 4 ), rs.getDate( "JOINED_DATE" ));
+                Person p = new Person(rs.getLong("ID"), rs.getString("FIRST_NAME"), rs.getString("LAST_NAME"), rs.getString(4), rs.getDate("JOINED_DATE"));
 
-                persons.add( p );
+                persons.add(p);
 
             }
 
-        }
-        catch ( SQLException e )
-        {
+        } catch (SQLException e) {
             throw e;
 
-        }
-
-        finally
-        {
-            try
-            {
-                JDBCHelper.closeResultSet( rs );
-                JDBCHelper.closePrepaerdStatement( ps );
-                JDBCHelper.closeConnection( con );
-            }
-            catch ( SQLException e )
-            {
+        } finally {
+            try {
+                JdbcHelper.closeResultSet(rs);
+                JdbcHelper.closePrepaerdStatement(ps);
+                JdbcHelper.closeConnection(con);
+            } catch (SQLException e) {
                 throw e;
             }
         }
         return persons;
     }
 
-    private static void insertPerson( Person p ) throws SQLException
-    {
+    private static void insertPerson(Person p) throws SQLException {
         Connection con = null;
         PreparedStatement ps = null;
-        try
-        {
-            con = JDBCHelper.getConnection();
-            if ( con == null )
-            {
-                System.out.println( "Error getting the connection. Please check if the DB server is running" );
+        try {
+            con = JdbcHelper.getConnection();
+            if (con == null) {
+                System.out.println("Error getting the connection. Please check if the DB server is running");
                 return;
             }
-            con.setAutoCommit( false );
-            ps = con.prepareStatement( SQLQueries.INSERT_SQL_QUERY );
-            ps.setLong( 1, p.getId() );
-            ps.setString( 2, p.getFirstName() );
-            ps.setString( 3, p.getLastName() );
-            ps.setString( 4, p.getEmail() );
-            ps.setDate( 5, new Date( p.getJoinedDate().getTime() ) );
+            con.setAutoCommit(false);
+            ps = con.prepareStatement(SqlQueries.INSERT_SQL_QUERY);
+            ps.setLong(1, p.getId());
+            ps.setString(2, p.getFirstName());
+            ps.setString(3, p.getLastName());
+            ps.setString(4, p.getEmail());
+            ps.setDate(5, new Date(p.getJoinedDate().getTime()));
 
             ps.execute();
-            System.out.println( "insertPerson => " + ps.toString() );
+            System.out.println("insertPerson => " + ps.toString());
             con.commit();
 
-        }
-        catch ( SQLException e )
-        {
-            try
-            {
-                if ( con != null )
-                {
+        } catch (SQLException e) {
+            try {
+                if (con != null) {
                     con.rollback();
                 }
-            }
-            catch ( SQLException e1 )
-            {
+            } catch (SQLException e1) {
                 throw e1;
             }
             throw e;
-        }
-        finally
-        {
-            try
-            {
-                JDBCHelper.closePrepaerdStatement( ps );
-                JDBCHelper.closeConnection( con );
-            }
-            catch ( SQLException e )
-            {
+        } finally {
+            try {
+                JdbcHelper.closePrepaerdStatement(ps);
+                JdbcHelper.closeConnection(con);
+            } catch (SQLException e) {
                 throw e;
             }
         }

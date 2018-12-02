@@ -1,6 +1,6 @@
 package dbHelpers;
 
-public class JDBCConstants
+public class JdbcConstants
 {
 
     public static final String DRIVER_NAME = "org.postgresql.Driver";

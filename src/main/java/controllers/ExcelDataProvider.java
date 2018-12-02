@@ -14,7 +14,7 @@ import utils.ExcelUtils;
  * @Author Gladson Antony
  * @Date 21-Feb-2017
  */
-public class ExcelDataProvider extends InitMethod
+public class ExcelDataProvider extends Initialization
 {
 	@DataProvider(name="multiSheetExcelRead")
 	public static Object[][] multiSheetExcelRead(Method method) throws Exception

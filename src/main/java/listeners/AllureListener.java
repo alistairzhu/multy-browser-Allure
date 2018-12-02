@@ -67,8 +67,11 @@ public class AllureListener extends TestHelper implements ITestListener, ISuiteL
 	{
 		String Name = result.getTestClass().getName() + "." + result.getMethod().getMethodName() ;
 		Reporter.log("\nFAILED TEST: " + result.getTestClass().getName() + "." + result.getMethod().getMethodName() + "\n", true);
-		AllureAttachments.saveFullPageScreenshot(Name, driver);
-/*		try 
+		String path = Images + Name + ".png";
+		//AllureAttachments.saveFullPageScreenshot(Name, driver);
+		AllureAttachments.saveFullPageScreenshotToFile(path, driver); //AZ
+
+/*		try
 		{
 			saveTextFileAttachment(TestData + "test.txt");
 		} 

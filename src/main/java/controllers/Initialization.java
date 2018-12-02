@@ -16,10 +16,9 @@ import org.testng.ITestResult;
 import org.testng.asserts.SoftAssert;
 
 /**
- * @Author Gladson Antony
- * @Date 28-Jan-2017
+ * Set up configuration of: Website, Credentials, Browser, Webdriver, OS, Test data file, Reports file, Property file
  */
-public class InitMethod 
+public class Initialization
 {
 	static ApplicationConfiguration appConfig = new ApplicationConfiguration();
 	

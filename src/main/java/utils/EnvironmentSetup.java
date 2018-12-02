@@ -8,13 +8,13 @@ import java.io.FileOutputStream;
 import java.net.InetAddress;
 import java.util.Properties;
 
-import controllers.InitMethod;
+import controllers.Initialization;
 
 /**
- * @Author Gladson Antony
- * @Date 28-Jan-2017
+ * 1. setProperty
+ * 2. Write properties into environment.properties file.
  */
-public class EnvironmentSetup extends InitMethod
+public class EnvironmentSetup extends Initialization
 {
 	
 	public static void environmentSetup() throws Exception

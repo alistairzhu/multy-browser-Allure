@@ -11,8 +11,7 @@ import pageObjects.modules.GMailPageObjects;
 import pageObjects.modules.GoogleHomePageObjects;
 
 /**
- * Initialize all page objects here.
- *
+ * Initialize ALL page objects here.
  */
 public class PageFactoryInitializer extends BrowserFactory {
 
@@ -21,10 +20,12 @@ public class PageFactoryInitializer extends BrowserFactory {
     }
 
     public GMailPageObjects gmailPage() {
+
         return PageFactory.initElements(driver, GMailPageObjects.class);
     }
 
     public GMailMainPageObjects gmailMainPage() {
+
         return PageFactory.initElements(driver, GMailMainPageObjects.class);
     }
 

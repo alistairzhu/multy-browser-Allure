@@ -105,3 +105,8 @@ __To use a Single Workbook with multiple `@DataProvider`sheets, Use:__
 ```java
 @Test(dataProvider="multiSheetExcelRead", dataProviderClass=ExcelDataProvider.class)
 ```
+---------------------------------------------------------------------------------------
+
+Test scructure:  ( <= extends)
+
+Test Class <= PageFactoryInitializer <= BrowserFactory <= TestHelper <= TestController <= Initialization

@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageObjects.initializePageObjects.PageFactoryInitializer;
@@ -26,6 +27,8 @@ public class Test3 extends PageFactoryInitializer {
         googleHomePage().clickonGmailLink();
         gmailPage().signInGmail("canzhuanywhere@gmail.com", "!Asdf1234");
         gmailMainPage().expandMore();
+
+        Assert.assertTrue(false);
 
     }
 

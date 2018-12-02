@@ -9,14 +9,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
-import controllers.InitMethod;
+import controllers.Initialization;
 
 /**
  * @Author Gladson Antony
  * @Date 25-Dec-2016
  */
 
-public class FluentWaiting extends InitMethod
+public class FluentWaiting extends Initialization
 {
 
 	/*To Wait Until Element to be Clickable*/

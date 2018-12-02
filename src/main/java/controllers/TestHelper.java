@@ -21,8 +21,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 /**
- * @Author Gladson Antony
- * @Date 27-Jan-2017
+ * Define actions based on KeyEvent.
  */
 public class TestHelper extends TestController
 {

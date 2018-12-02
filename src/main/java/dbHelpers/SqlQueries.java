@@ -1,12 +1,12 @@
 package dbHelpers;
 
-public class SQLQueries {
+public class SqlQueries {
 
 
     /**
      * Table name : PERSON
      *
-     * SQL:
+     * SQL for creating the table:
      * create table PERSON (ID bigint not null, EMAIL varchar(255), FIRST_NAME varchar(255), JOINED_DATE date, LAST_NAME varchar(255), primary key (id))
      *
      */

@@ -10,7 +10,7 @@ import java.sql.SQLException;
 /**
  *
  */
-public class JDBCHelper
+public class JdbcHelper
 {
     private static Connection connection;
 
@@ -18,7 +18,7 @@ public class JDBCHelper
     {
         try
         {
-            Class.forName( JDBCConstants.DRIVER_NAME );
+            Class.forName( JdbcConstants.DRIVER_NAME );
         }
         catch ( ClassNotFoundException e )
         {
@@ -28,7 +28,7 @@ public class JDBCHelper
 
     public static Connection getConnection() throws SQLException
     {
-        connection = DriverManager.getConnection( JDBCConstants.URL, JDBCConstants.USERNAME, JDBCConstants.PASSWORD );
+        connection = DriverManager.getConnection( JdbcConstants.URL, JdbcConstants.USERNAME, JdbcConstants.PASSWORD );
         return connection;
     }
 
