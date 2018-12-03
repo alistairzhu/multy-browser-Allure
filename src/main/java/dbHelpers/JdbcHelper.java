@@ -29,6 +29,9 @@ public class JdbcHelper
     public static Connection getConnection() throws SQLException
     {
         connection = DriverManager.getConnection( JdbcConstants.URL, JdbcConstants.USERNAME, JdbcConstants.PASSWORD );
+        if (connection == null ){
+            System.out.println( "Error getting the connection. Please check if the DB server is running" );
+        }
         return connection;
     }
 

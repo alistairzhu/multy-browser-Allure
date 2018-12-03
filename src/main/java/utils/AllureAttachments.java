@@ -18,6 +18,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import controllers.ApplicationConfiguration;
+import org.testng.Reporter;
 import ru.yandex.qatools.allure.annotations.Attachment;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -26,7 +27,7 @@ import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
  * @Author Gladson Antony
  * @Date 26-Jan-2017
  */
-public class AllureAttachments extends ApplicationConfiguration
+public class AllureAttachments extends ApplicationConfiguration //AZ: tobe deleted because it is replaced by saveFullPageScreenshotToFile()
 {
 	/*To Attach the Entire Page Screenshot*/
 	@Attachment(value = "Entirepage Screenshot of {0}", type = "image/png")
@@ -48,34 +49,27 @@ public class AllureAttachments extends ApplicationConfiguration
 		return "Unable to Get Screenshot.".getBytes();
 	}
 
-	/*To Attach the Entire Page Screenshot*/
-	//@Attachment(value = "Entirepage Screenshot of {0}", type = "image/png")
+	/*To Attach the Entire Page Screenshot as a file*/
 	public static void saveFullPageScreenshotToFile(String name,WebDriver driver)
 	{
 		try {
 
 			//Convert web driver object to TakeScreenshot
-
 			TakesScreenshot scrShot =((TakesScreenshot)driver);
-
 			//Call getScreenshotAs method to create image file
-
 			File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-
 			//Move image file to new destination
-
 			File DestFile=new File(name);
-
 			//Copy file at destination
-
 			FileUtils.copyFile(SrcFile, DestFile);
 		}
 		catch (IOException e)
 		{
+			Reporter.log("\nUnable to take Screenshot.\n", true);
 			e.printStackTrace();
 		}
-
 	}
+
 	/*To Convert the File to Bytes*/
 	private static byte[] fileToBytes(String fileName) throws Exception 
 	{

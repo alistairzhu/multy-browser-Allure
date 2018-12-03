@@ -5,8 +5,8 @@ import ru.qatools.properties.PropertyLoader;
 import ru.qatools.properties.Resource;
 
 /**
- * @Author Gladson Antony
- * @Date 25-Dec-2016
+ * Converting "ApplicationConfig.properties" into parameters.
+ *
  */
 
 
@@ -33,6 +33,9 @@ public class ApplicationConfiguration
 	@Property("VideoRecordingFeature")
 	private String VideoRecordingFeature;
 
+	@Property("DatabaseConnectionFeature")
+	private String DatabaseConnectionFeature;
+
 	public String getBrowserName()
 	{
 		return BrowserName;
@@ -53,9 +56,8 @@ public class ApplicationConfiguration
 		return Password;
 	}
 
-	public String getVideoRecordingFeature() 
-	{
-		return VideoRecordingFeature;
-	}
+	public String getVideoRecordingFeature() { return VideoRecordingFeature; }
+
+	public String getDatabaseConnectionFeature() { return DatabaseConnectionFeature; }
 
 }

@@ -9,14 +9,16 @@ import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.io.File;
 import java.lang.reflect.Method;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
+import dbHelpers.JdbcConstants;
 import org.monte.media.Format;
 import org.monte.media.FormatKeys;
 import org.monte.media.VideoFormatKeys;
 import org.monte.media.math.Rational;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 import utils.DateAndTime;
 import utils.EnvironmentSetup;
@@ -28,6 +30,53 @@ import utils.EnvironmentSetup;
  */
 public class TestController extends Initialization
 {
+	public Connection connection;
+
+	@BeforeClass
+	public void setUp() {
+		/**
+		 * Set up Database connection only when the switch is "enabled".
+		 *
+		 */
+		if (DatabaseConnectionFeature.equalsIgnoreCase("enabled")) {
+			String databaseURL = JdbcConstants.URL;
+			String user = JdbcConstants.USERNAME;
+			String password = JdbcConstants.PASSWORD;
+			connection = null;
+			try {
+				Class.forName(JdbcConstants.DRIVER_NAME);
+				System.out.println("Connecting to Database...");
+				connection = DriverManager.getConnection(databaseURL, user, password);
+				if (connection != null) {
+					System.out.println("Connected to the Database...");
+				}
+			} catch (SQLException ex) {
+				ex.printStackTrace();
+			} catch (ClassNotFoundException ex) {
+				ex.printStackTrace();
+			}
+		}
+	}
+
+	@AfterClass
+	public void tearDownAll() {
+		/**
+		 * Close Database connection only when the switch is "enabled".
+		 *
+		 */
+		if (DatabaseConnectionFeature.equalsIgnoreCase("enabled")) {
+			if (connection != null) {
+				try {
+					System.out.println("Closing Database Connection...");
+					connection.close();
+				} catch (SQLException ex) {
+					ex.printStackTrace();
+				}
+			}
+		}
+	}
+
+
 	@BeforeSuite
 	public void beforeSuite() throws Exception
 	{

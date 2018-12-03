@@ -281,13 +281,20 @@
 			<scope>test</scope>
 		</dependency>
 
-
 		<!-- Selenium ShutterBag Dependeny to capture Images -->
 		<dependency>
 			<groupId>com.assertthat</groupId>
 			<artifactId>selenium-shutterbug</artifactId>
 			<version>0.6</version>
 		</dependency>
+
+		<!-- JDBC driver for postgresq -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.1.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<profiles>

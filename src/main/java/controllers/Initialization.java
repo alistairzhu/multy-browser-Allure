@@ -27,6 +27,7 @@ public class Initialization
 	public static String  UserName = appConfig.getUserName();
 	public static String  Password = appConfig.getPassword();
 	public static String  VideoRecordingFeature = appConfig.getVideoRecordingFeature();
+	public static String  DatabaseConnectionFeature = appConfig.getDatabaseConnectionFeature();
 	
 	public static WebDriver driver;
 	public static String FS = File.separator;
