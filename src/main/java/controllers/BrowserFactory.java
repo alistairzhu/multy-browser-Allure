@@ -22,7 +22,7 @@ public class BrowserFactory extends TestHelper {
 
     @SuppressWarnings("deprecation")
     @BeforeClass(enabled = true)
-    public void StartBrowser() {
+    public void StartBrowser() throws  Exception{
         System.out.println("Operating System: " + OSName);
 
         if (BrowserType.toLowerCase().equalsIgnoreCase("firefox")) {
@@ -140,12 +140,13 @@ public class BrowserFactory extends TestHelper {
         } else {
             System.out.println("Please Provide a Valid Browser");
         }
+
     }
 
 
     @AfterClass(enabled = true, alwaysRun = true)
     public void tearDown() throws Exception {
         Thread.sleep(5000);
-        driver.quit(); // AZ: need to enable it later
+ //       driver.quit(); // AZ: need to enable it later
     }
 }

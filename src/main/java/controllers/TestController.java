@@ -38,6 +38,8 @@ public class TestController extends Initialization
 		 * Set up Database connection only when the switch is "enabled".
 		 *
 		 */
+
+/*
 		if (DatabaseConnectionFeature.equalsIgnoreCase("enabled")) {
 			String databaseURL = JdbcConstants.URL;
 			String user = JdbcConstants.USERNAME;
@@ -56,6 +58,7 @@ public class TestController extends Initialization
 				ex.printStackTrace();
 			}
 		}
+*/
 	}
 
 	@AfterClass
