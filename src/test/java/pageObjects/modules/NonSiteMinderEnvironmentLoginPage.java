@@ -30,9 +30,9 @@ public class NonSiteMinderEnvironmentLoginPage extends PageFactoryInitializer{
     public SchoolSelectionPage login() throws Exception
     {
         utils.FluentWaiting.waitUntillElementToBeVisible(30, 500, userName);
-        userName.sendKeys("MSCHOOLUSER");
+        userName.sendKeys("");
         utils.FluentWaiting.waitUntillElementToBeClickable(30, 500, password);
-        password.sendKeys(" MSCHOOLUSER");
+        password.sendKeys(" ");
         Thread.sleep(5000);
         utils.FluentWaiting.waitUntillElementToBeClickable(30, 500, loginButton);
         loginButton.click();
